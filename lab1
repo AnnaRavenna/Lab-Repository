@@ -1,0 +1,15 @@
+def remove_Duplicates(x):
+    return list(dict.fromkeys(x))
+
+a_list=remove_Duplicates([10,12,14,14,16,28,28,30])
+print(a_list)
+
+import numpy as np
+def sortList(x):
+    for i in range(len(x)):
+        swap=i+np.argmin(x[i:])
+        (x[i],x[swap])=(x[swap],x[i])
+    return x
+
+x=a_list
+sortList(x)
